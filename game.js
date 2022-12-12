@@ -14,7 +14,7 @@ const foodColor = "#FEB897"
 let score = 0;
 let ghosts = [];
 const ghostCount = 4;
-let lives = 50;
+let lives = 5;
 let foodCount = 0;
 
 const DIRECTION_RIGHT = 4;
@@ -143,7 +143,7 @@ let gameInterval = setInterval(gameloop, 1000 / fps)
 let drawRemainingLives = () => {
     canvasContext.font = "20px Emulogic";
     canvasContext.fillStyle = "white";
-    canvasContext.fillText("Lives: ", 220, oneBlockSize * (map.length + 1));
+    canvasContext.fillText("Lives: ", 250, oneBlockSize * (map.length + 1));
 
     for (let i = 0; i < lives; i++) {
         canvasContext.drawImage(
@@ -152,7 +152,7 @@ let drawRemainingLives = () => {
             0,
             oneBlockSize,
             oneBlockSize,
-            350 + i * oneBlockSize,
+            320 + i * oneBlockSize,
             oneBlockSize * map.length + 2,
             oneBlockSize,
             oneBlockSize
